@@ -1,21 +1,20 @@
-
 import {BrowserRouter, Routes, Route} from 'react-router'
-import { Signin } from './screens/Signin';
-import { VideoPage } from './screens/VideoPage';
-import { SignUp } from './screens/Signup';
-import { LandingPage } from './screens/Landing';
+import { LandingPage } from './screens/LandingPage'
+import { VideoPage } from './screens/VideoPage'
+import { Signin } from './screens/LoginPage'
+import { Signup } from './screens/SignupPage'
 
-
-export function App() {
+function App() {
+  
 
   return (
-    <div>
+    <div className=''>
       <BrowserRouter>
       <Routes>
           <Route path='/' element={<LandingPage />} />
          <Route path='/watch' element={<VideoPage />} />
         <Route path='/signin' element={<Signin />} />
-         <Route path='/signup' element={<SignUp />} />
+         <Route path='/signup' element={<Signup />} />
         
       </Routes>
       </BrowserRouter>
@@ -24,7 +23,6 @@ export function App() {
 
 
 
-  
 }
 
-export default App;
+export default App
