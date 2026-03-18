@@ -73,7 +73,7 @@ router.get("/videos/:id", async(req:Request, res:Response) => {
 // to upload the video
 router.post("/videos", authenticated, async(req:Request, res:Response) => {
     try {
-        const {videoUrl, thumbnail} = req.body as {videoUrl: string, thumbnail: string}    
+        const {videoUrl, thumbnail, title} = req.body as {videoUrl: string, thumbnail: string, title: string}    
        const userId = req.user.id;
        
 
@@ -88,7 +88,8 @@ router.post("/videos", authenticated, async(req:Request, res:Response) => {
             data: {
                 videoUrl,
                 thumbnail,
-                userId
+                userId,
+                title
             }
         });
 

@@ -41,6 +41,7 @@ model Uploads {
   videoUrl      String
   thumbnail     String
   userId        String
+  title         String @default("Video title")
 
   user User @relation(fields: [userId], references: [id])
 
