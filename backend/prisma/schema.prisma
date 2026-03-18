@@ -23,7 +23,7 @@ enum Gender {
 
 model User {
   id              String  @id @default(uuid())
-  username        String
+  username        String  
   password        String
   gender          Gender  @default(Male)
   channelName     String
@@ -38,7 +38,6 @@ model User {
 
 model Uploads {
   id            String @id @default(uuid())
-  slug          String
   videoUrl      String
   thumbnail     String
   userId        String
